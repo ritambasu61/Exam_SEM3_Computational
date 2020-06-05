@@ -45,7 +45,9 @@ for v in np.arange(-5,5,0.05):
        r=r+(k1+2*k2+2*k3+k4)/6.0
        x=x+h
        rel_error_for_particular_v.append(abs(r[0]-f_exact(x))/f_exact(x))
-
+       """to avoid the 0/0 form for the first element at y(0)=0 (check) 
+       we are defining rel_error array at the last . So, it starts from (initial_value_of_x +h)
+       to calculate the error"""  
     y_vf.append(r[0])
     rel_error.append(rel_error_for_particular_v)  
     candidate_sol.append(trial_sol_for_particular_v)
