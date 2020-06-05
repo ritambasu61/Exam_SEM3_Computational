@@ -8,7 +8,7 @@ Created on Fri Jun  5 11:29:12 2020
 
 import numpy as np
 from matplotlib import pyplot as plt
-#Problem1
+#Problem10
 
 def f(x):
     if abs(x)<1.0:
