@@ -66,7 +66,7 @@ plt.scatter(x_num,y2_num,color='Orange',marker='^',s=15,label="numpy y2(t)")
 plt.plot(x_arr,y1,label="numerical y1(t)")
 plt.plot(x_arr,y2,label="numerical y2(t)")
 
-#plotting exact solutions
+#plotting exact solutions calculated by using mathematica
 plt.scatter(x_arr,1/3*(2*x_arr-np.exp(-100*x_arr)+2*np.exp(-x_arr)),color='Red', marker='o',s=10,label="Exact y1(t)")
 plt.scatter(x_arr,1/3*(-x_arr+2*np.exp(-100*x_arr)-np.exp(-x_arr)),color='Black', marker='o',s=10,label="Exact y2(t)")
 
