@@ -59,7 +59,7 @@ y1_num=y_num[:,0]
 y2_num=y_num[:,1]
 
 #plotting scipy solutions
-plt.scatter(x_num,y1_num,color='Yellow',marker='^',s=15,label="scipy y1(t)")
+plt.scatter(x_num,y1_num,color='Green',marker='^',s=15,label="scipy y1(t)")
 plt.scatter(x_num,y2_num,color='Orange',marker='^',s=15,label="scipy y2(t)")
 
 #comparison of actual solution with computed solution through plotting  
