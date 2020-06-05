@@ -51,18 +51,18 @@ while x<=0.5+h:
 
 x_arr=np.array(x_arr)
 
-#solving ode by numpy
+#solving ode by scipy
 y0=np.array([y10,y20])  # initial values of vector y
 x_num=np.linspace(0.0,0.5,100)
 y_num=odeint(f,y0,x_num)
 y1_num=y_num[:,0]
 y2_num=y_num[:,1]
 
-#plotting numpy solutions
-plt.scatter(x_num,y1_num,color='Yellow',marker='^',s=15,label="numpy y1(t)")
-plt.scatter(x_num,y2_num,color='Orange',marker='^',s=15,label="numpy y2(t)")
+#plotting scipy solutions
+plt.scatter(x_num,y1_num,color='Yellow',marker='^',s=15,label="scipy y1(t)")
+plt.scatter(x_num,y2_num,color='Orange',marker='^',s=15,label="scipy y2(t)")
 
-#comparison of actual solution with computed solution through plottig  
+#comparison of actual solution with computed solution through plotting  
 plt.plot(x_arr,y1,label="numerical y1(t)")
 plt.plot(x_arr,y2,label="numerical y2(t)")
 
@@ -75,3 +75,4 @@ plt.ylabel('y(t)',fontsize=16)
 plt.title('Solving simaltenious differential equations',fontsize=20)
 plt.legend(loc='best')
 plt.show()
+
