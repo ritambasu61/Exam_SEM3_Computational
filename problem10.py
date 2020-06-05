@@ -8,7 +8,7 @@ Created on Fri Jun  5 11:29:12 2020
 
 import numpy as np
 from matplotlib import pyplot as plt
-#Problem10
+#Problem1
 
 def f(x):
     if abs(x)<1.0:
@@ -42,7 +42,20 @@ for i in range(len(numpoints)):
 plt.plot(karr[0],ft_arr[0],'r',label='ft for sample 1(512)')
 plt.plot(karr[1],ft_arr[1],'b',label='ft for sample 2(1024)')
 plt.plot(karr[2],ft_arr[2],'y',label='ft for sample 3(2048)')
-plt.xlabel('x',fontsize=15)
+plt.xlabel('k',fontsize=15)
 plt.ylabel(r'$\tilde{f}$(k)',fontsize=15)
+plt.xlim(-50,50)
+plt.legend(loc='best')
+plt.show()
+
+#plotting of the function
+x=np.linspace(-5,5,100)
+f_arr=np.zeros(len(x))
+for i in range(len(x)):
+    f_arr[i]=f(x[i])
+plt.plot(x,f_arr,label='Actual function')
+plt.xlabel('x',fontsize=15)
+plt.ylabel('f(x)',fontsize=15)
+plt.xlim(-5,5)
 plt.legend(loc='best')
 plt.show()
